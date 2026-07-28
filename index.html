@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight Partners EMS | SPAC Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+    <style>
+        html, body { font-family: 'Pretendard', -apple-system, sans-serif; background-color: #020617; }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        .tab-active { background-color: #1e293b; color: #f1f5f9; border-color: #475569 !important; }
+        th.sortable { cursor: pointer; user-select: none; }
+        th.sortable:hover { color: #e2e8f0; }
+        .sticky-head th { position: sticky; top: 0; z-index: 10; background-color: #0b1220; }
+        .fade-in { animation: fade .35s ease; }
+        @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen p-4 md:p-6 lg:p-8">
+
+    <!-- Header -->
+    <header class="flex flex-wrap items-center justify-between gap-3 mb-5">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500/80 to-teal-600/80 flex items-center justify-center shadow-lg shadow-emerald-900/30">
+                <i class="fas fa-crosshairs text-white text-sm"></i>
+            </div>
+            <div>
+                <h1 class="text-lg md:text-xl font-bold text-white tracking-tight">SPAC Tracker <span class="text-slate-500 font-normal">· 스팩 트래커</span></h1>
+                <p class="text-[11px] text-slate-500">KOSDAQ 기업인수목적회사 · 합병 · 공모가 괴리 · 합병기한 · 신규상장</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="text-[10px] text-slate-500"><i class="fas fa-clock mr-1"></i>Updated: <span id="updated">--</span></span>
+            <button id="refresh" class="text-[11px] px-2.5 py-1.5 rounded-lg bg-slate-800/70 border border-slate-700 hover:bg-slate-700 transition-colors">
+                <i class="fas fa-rotate mr-1"></i>새로고침
+            </button>
+        </div>
+    </header>
+
+    <!-- KPI Row -->
+    <section id="kpi" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-5"></section>
+
+    <!-- Merger deal cards (딜 인텔리전스) -->
+    <section class="mb-5">
+        <div class="flex items-center gap-2 mb-2.5">
+            <i class="fas fa-handshake text-emerald-400 text-sm"></i>
+            <h2 class="text-sm font-semibold text-slate-200">합병 진행 스팩 <span class="text-slate-500 font-normal">— 합병대상 기업 인텔리전스</span></h2>
+        </div>
+        <div id="merger-cards" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3"></div>
+    </section>
+
+    <!-- Controls -->
+    <section class="flex flex-wrap items-center gap-2 mb-3">
+        <div id="filters" class="flex flex-wrap gap-1.5"></div>
+        <div class="flex-1"></div>
+        <div class="relative">
+            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+            <input id="search" type="text" placeholder="종목명·코드 검색"
+                   class="bg-slate-900 border border-slate-700 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500/60 w-48">
+        </div>
+    </section>
+
+    <!-- Main table -->
+    <section class="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden">
+        <div class="overflow-x-auto max-h-[62vh] overflow-y-auto">
+            <table class="w-full text-xs">
+                <thead class="sticky-head text-slate-400 text-[11px] uppercase tracking-wide">
+                    <tr class="border-b border-slate-700/70">
+                        <th class="sortable text-left  px-3 py-2.5" data-k="name">종목명</th>
+                        <th class="sortable text-right px-3 py-2.5" data-k="price">현재가</th>
+                        <th class="sortable text-right px-3 py-2.5" data-k="chg_pct">등락%</th>
+                        <th class="sortable text-right px-3 py-2.5" data-k="prem_pct">공모가대비</th>
+                        <th class="sortable text-right px-3 py-2.5" data-k="mktcap_eok">시총(억)</th>
+                        <th class="sortable text-right px-3 py-2.5" data-k="volume">거래량</th>
+                        <th class="sortable text-center px-3 py-2.5" data-k="listing_date">상장일</th>
+                        <th class="sortable text-center px-3 py-2.5" data-k="d_day">합병기한</th>
+                        <th class="sortable text-center px-3 py-2.5" data-k="status">상태</th>
+                        <th class="text-left px-3 py-2.5">합병대상</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody" class="text-slate-200"></tbody>
+            </table>
+        </div>
+        <div id="count" class="text-[11px] text-slate-500 px-3 py-2 border-t border-slate-800"></div>
+    </section>
+
+    <footer class="text-[10px] text-slate-600 mt-4 leading-relaxed">
+        데이터: 금융위 상장종목 · KIS 시세/종목마스터 · OpenDART 회사합병결정 &nbsp;·&nbsp;
+        합병기한 = 상장일 + 36개월(근사) &nbsp;·&nbsp; 공모가대비 음수 = 공모가 하회(할인) &nbsp;·&nbsp;
+        투자판단의 근거가 아니며 원자료 확인 필요.
+    </footer>
+
+    <script>
+    /* ─────────── 데이터 로드 (GitHub Pages: json fetch) ─────────── */
+    async function loadData() {
+        if (window.SPAC_TRACKER) return window.SPAC_TRACKER;
+        const urls = [
+            `./spac_tracker_latest.json?ts=${Date.now()}`,
+        ];
+        for (const u of urls) {
+            try { const r = await fetch(u); if (r.ok) return await r.json(); } catch (e) {}
+        }
+        return null;
+    }
+
+    /* ─────────── 포맷 유틸 ─────────── */
+    const nf = n => (n == null || isNaN(n)) ? '-' : Number(n).toLocaleString('ko-KR');
+    const won = n => (n == null || isNaN(n) || n === 0) ? '-' : nf(n);
+    const pct = (n, dp = 2) => (n == null || isNaN(n)) ? '-' : (n > 0 ? '+' : '') + Number(n).toFixed(dp) + '%';
+    function ddMMdd(iso) { return iso ? iso.slice(2).replace(/-/g, '.') : '-'; }
+
+    /* 등락 색 (한국식: 상승 적, 하락 청) */
+    function chgColor(n) { if (n > 0) return 'text-rose-400'; if (n < 0) return 'text-sky-400'; return 'text-slate-400'; }
+
+    /* 공모가대비: 할인(음수) = 시안 강조(기회), 할증(양수) = 앰버 */
+    function premCell(n) {
+        if (n == null || isNaN(n)) return '<span class="text-slate-600">-</span>';
+        if (n < 0)  return `<span class="text-cyan-300 font-semibold">${pct(n)}</span><span class="ml-1 text-[9px] text-cyan-500/70">할인</span>`;
+        if (n > 0)  return `<span class="text-amber-400">${pct(n)}</span>`;
+        return `<span class="text-slate-400">0.00%</span>`;
+    }
+
+    /* 합병기한 D-day */
+    function ddayCell(d) {
+        if (d == null) return '<span class="text-slate-600">-</span>';
+        let cls = 'text-slate-300', badge = '';
+        if (d <= 90)       { cls = 'text-rose-400 font-bold';   badge = '임박'; }
+        else if (d <= 180) { cls = 'text-amber-400 font-semibold'; }
+        const label = d < 0 ? `D+${-d}` : `D-${d}`;
+        return `<span class="${cls}">${label}</span>` + (badge ? `<span class="ml-1 text-[9px] text-rose-500/80">${badge}</span>` : '');
+    }
+
+    const STATUS_STYLE = {
+        '합병진행':     'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
+        '거래정지':     'bg-slate-500/15  text-slate-300  border-slate-500/30',
+        '관리종목':     'bg-amber-500/15  text-amber-300  border-amber-500/30',
+        '상장폐지예정': 'bg-rose-500/15   text-rose-300   border-rose-500/30',
+        '정상':         'bg-slate-700/20  text-slate-400  border-slate-700/40',
+    };
+    function statusBadge(s) {
+        const cls = STATUS_STYLE[s] || STATUS_STYLE['정상'];
+        return `<span class="inline-block px-2 py-0.5 rounded-md border text-[10px] ${cls}">${s}</span>`;
+    }
+
+    /* ─────────── 상태 ─────────── */
+    let DATA = null, ROWS = [], FILTER = '전체', QUERY = '', SORT = { k: 'status', dir: 1 };
+
+    const FILTERS = [
+        { key: '전체',     icon: 'fa-layer-group' },
+        { key: '합병진행', icon: 'fa-handshake' },
+        { key: '할인',     icon: 'fa-tags' },
+        { key: '기한임박', icon: 'fa-hourglass-half' },
+        { key: '신규상장', icon: 'fa-star' },
+        { key: '정상',     icon: 'fa-circle-check' },
+    ];
+
+    function passFilter(r) {
+        switch (FILTER) {
+            case '합병진행': return !!r.merger;
+            case '할인':     return r.prem_pct != null && r.prem_pct < 0;
+            case '기한임박': return r.d_day != null && r.d_day <= 180;
+            case '신규상장': return r.is_new;
+            case '정상':     return r.status === '정상';
+            default:         return true;
+        }
+    }
+    function passQuery(r) {
+        if (!QUERY) return true;
+        const q = QUERY.toLowerCase();
+        return r.name.toLowerCase().includes(q) || r.code.includes(q) ||
+               (r.merger && r.merger.target && r.merger.target.toLowerCase().includes(q));
+    }
+
+    /* 정렬용 값 (상태는 우선순위 정렬) */
+    const STATUS_ORDER = { '합병진행': 0, '상장폐지예정': 1, '거래정지': 2, '관리종목': 3, '정상': 4 };
+    function sortVal(r, k) {
+        if (k === 'status') return STATUS_ORDER[r.status] ?? 9;
+        if (k === 'name') return r.name;
+        if (k === 'listing_date') return r.listing_date || '';
+        const v = r[k];
+        return (v == null || isNaN(v)) ? -Infinity : v;
+    }
+
+    function renderKPI() {
+        const k = DATA.kpi;
+        const tiles = [
+            { label: '전체 스팩', val: k.total,        unit: '종목', color: 'text-white',        icon: 'fa-layer-group',    sub: 'KOSDAQ' },
+            { label: '합병 진행', val: k.merging,      unit: '건',   color: 'text-emerald-300',   icon: 'fa-handshake',      sub: '회사합병결정 공시' },
+            { label: '공모가 할인', val: k.discount,   unit: '종목', color: 'text-cyan-300',      icon: 'fa-tags',           sub: '2,000원 하회' },
+            { label: '기한 임박', val: k.deadline_90,  unit: '종목', color: 'text-rose-300',      icon: 'fa-hourglass-half', sub: 'D-90 이내' },
+            { label: '신규 상장', val: k.new_listing,  unit: '종목', color: 'text-amber-300',     icon: 'fa-star',           sub: '최근 60일' },
+            { label: '평균 괴리', val: pct(k.avg_prem),unit: '',     color: (k.avg_prem>=0?'text-amber-300':'text-cyan-300'), icon: 'fa-percent', sub: '공모가 대비' },
+        ];
+        document.getElementById('kpi').innerHTML = tiles.map(t => `
+            <div class="fade-in bg-slate-900/50 border border-slate-800 rounded-xl p-3.5 hover:border-slate-700 transition-colors">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-[11px] text-slate-500">${t.label}</span>
+                    <i class="fas ${t.icon} text-slate-600 text-xs"></i>
+                </div>
+                <div class="${t.color} text-2xl font-bold leading-none">${t.val}<span class="text-xs font-normal text-slate-500 ml-1">${t.unit}</span></div>
+                <div class="text-[10px] text-slate-600 mt-1">${t.sub}</div>
+            </div>`).join('');
+    }
+
+    function renderMergerCards() {
+        const list = ROWS.filter(r => r.merger)
+            .sort((a, b) => (b.merger.rcept_dt || '').localeCompare(a.merger.rcept_dt || ''));
+        const el = document.getElementById('merger-cards');
+        if (!list.length) { el.innerHTML = '<div class="text-xs text-slate-600 col-span-full py-4 text-center">합병 진행 중인 스팩이 없습니다.</div>'; return; }
+        el.innerHTML = list.map(r => {
+            const m = r.merger;
+            const dt = m.rcept_dt ? `${m.rcept_dt.slice(0,4)}.${m.rcept_dt.slice(4,6)}.${m.rcept_dt.slice(6,8)}` : '';
+            const target = m.target || '<span class="text-slate-500">대상 미파싱 — 공시 확인</span>';
+            const sales = m.target_sales ? `<span class="text-slate-500">매출</span> ${nf(Math.round(m.target_sales/1e8))}억` : '';
+            return `
+            <div class="fade-in bg-slate-900/60 border border-emerald-900/30 rounded-xl p-3.5 hover:border-emerald-700/40 transition-colors">
+                <div class="flex items-start justify-between gap-2 mb-2">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-100">${r.name}</div>
+                        <div class="text-[10px] text-slate-500">${r.code} · 현재가 ${won(r.price)}원 · 공모가대비 ${premCell(r.prem_pct)}</div>
+                    </div>
+                    <span class="text-[10px] text-emerald-400 whitespace-nowrap"><i class="fas fa-calendar-check mr-1"></i>${dt}</span>
+                </div>
+                <div class="bg-slate-950/50 rounded-lg p-2.5 border border-slate-800">
+                    <div class="text-[10px] text-slate-500 mb-0.5">합병대상</div>
+                    <div class="text-[13px] font-medium text-emerald-200 leading-snug">${target}</div>
+                    ${m.target_business ? `<div class="text-[11px] text-slate-400 mt-1 leading-snug">${m.target_business}</div>` : ''}
+                    <div class="flex items-center gap-3 mt-2 text-[11px]">
+                        ${m.ratio ? `<span class="text-slate-300"><span class="text-slate-500">합병비율</span> ${m.ratio}</span>` : ''}
+                        ${sales}
+                    </div>
+                </div>
+                <a href="${m.dart_url}" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-1 mt-2 text-[11px] text-sky-400 hover:text-sky-300">
+                   <i class="fas fa-file-lines"></i> DART 회사합병결정 원문 <i class="fas fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+            </div>`;
+        }).join('');
+    }
+
+    function renderFilters() {
+        document.getElementById('filters').innerHTML = FILTERS.map(f => `
+            <button data-f="${f.key}" class="filter-btn text-[11px] px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:bg-slate-800 transition-colors ${FILTER === f.key ? 'tab-active' : 'text-slate-400'}">
+                <i class="fas ${f.icon} mr-1 text-[10px]"></i>${f.key}
+            </button>`).join('');
+        document.querySelectorAll('.filter-btn').forEach(b =>
+            b.onclick = () => { FILTER = b.dataset.f; renderFilters(); renderTable(); });
+    }
+
+    function renderTable() {
+        let rows = ROWS.filter(passFilter).filter(passQuery);
+        const { k, dir } = SORT;
+        rows.sort((a, b) => {
+            const va = sortVal(a, k), vb = sortVal(b, k);
+            if (va < vb) return -1 * dir;
+            if (va > vb) return 1 * dir;
+            return a.name.localeCompare(b.name);
+        });
+
+        document.getElementById('tbody').innerHTML = rows.map(r => {
+            const target = r.merger && r.merger.target
+                ? `<span class="text-emerald-300">${r.merger.target}</span>`
+                : (r.merger ? '<span class="text-slate-500 text-[10px]">공시확인</span>' : '<span class="text-slate-700">-</span>');
+            return `
+            <tr class="border-b border-slate-800/50 hover:bg-slate-800/25 transition-colors">
+                <td class="px-3 py-2">
+                    <div class="font-medium text-slate-100">${r.name}${r.is_new ? ' <span class="text-[9px] text-amber-400 align-top">NEW</span>' : ''}</div>
+                    <div class="text-[10px] text-slate-500">${r.code}</div>
+                </td>
+                <td class="px-3 py-2 text-right tabular-nums">${won(r.price)}</td>
+                <td class="px-3 py-2 text-right tabular-nums ${chgColor(r.chg_pct)}">${pct(r.chg_pct)}</td>
+                <td class="px-3 py-2 text-right tabular-nums">${premCell(r.prem_pct)}</td>
+                <td class="px-3 py-2 text-right tabular-nums text-slate-300">${nf(r.mktcap_eok)}</td>
+                <td class="px-3 py-2 text-right tabular-nums text-slate-400">${nf(r.volume)}</td>
+                <td class="px-3 py-2 text-center text-slate-400 tabular-nums">${ddMMdd(r.listing_date)}</td>
+                <td class="px-3 py-2 text-center tabular-nums">${ddayCell(r.d_day)}</td>
+                <td class="px-3 py-2 text-center">${statusBadge(r.status)}</td>
+                <td class="px-3 py-2">${target}</td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('count').textContent =
+            `${rows.length}개 표시 / 전체 ${ROWS.length}개` + (FILTER !== '전체' ? ` · 필터: ${FILTER}` : '');
+    }
+
+    function bindSort() {
+        document.querySelectorAll('th.sortable').forEach(th => th.onclick = () => {
+            const k = th.dataset.k;
+            SORT = SORT.k === k ? { k, dir: -SORT.dir } : { k, dir: (k === 'name' || k === 'listing_date') ? 1 : -1 };
+            document.querySelectorAll('th.sortable').forEach(t => t.querySelector('.arrow')?.remove());
+            const a = document.createElement('span');
+            a.className = 'arrow ml-1 text-emerald-400';
+            a.textContent = SORT.dir === 1 ? '▲' : '▼';
+            th.appendChild(a);
+            renderTable();
+        });
+    }
+
+    async function init() {
+        DATA = await loadData();
+        if (!DATA) {
+            document.getElementById('tbody').innerHTML =
+                '<tr><td colspan="10" class="text-center text-rose-400 py-8">데이터를 불러오지 못했습니다. spac_tracker.py 실행 후 spac_tracker_latest.js 가 같은 폴더에 있는지 확인하세요.</td></tr>';
+            return;
+        }
+        ROWS = DATA.spacs || [];
+        document.getElementById('updated').textContent = DATA.generated_at || '--';
+        renderKPI();
+        renderMergerCards();
+        renderFilters();
+        bindSort();
+        renderTable();
+    }
+
+    document.getElementById('search').addEventListener('input', e => { QUERY = e.target.value.trim(); renderTable(); });
+    document.getElementById('refresh').addEventListener('click', () => location.reload());
+    init();
+    </script>
+</body>
+</html>
