@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-27 13:12:56",
+ "generated_at": "2026-10-27 14:14:00",
  "kpi": {
   "total": 68,
   "merging": 10,
   "discount": 26,
   "deadline_90": 0,
   "new_listing": 3,
-  "avg_prem": 2.94
+  "avg_prem": 2.9
  },
  "spacs": [
   {
@@ -14,13 +14,13 @@
    "name": "IBKS제24호스팩",
    "corp_name": "아이비케이에스제24호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 3540,
-   "chg_pct": -0.84,
+   "price": 3535,
+   "chg_pct": -0.98,
    "issue_price": 2000,
-   "prem_pct": 77.0,
+   "prem_pct": 76.75,
    "shares": 4230000,
    "mktcap_eok": 150,
-   "volume": 20144,
+   "volume": 26449,
    "vol_hist": [
     {
      "d": "09.22",
@@ -108,10 +108,10 @@
     },
     {
      "d": "10.27",
-     "v": 20144
+     "v": 26449
     }
    ],
-   "vol_avg": 159739,
+   "vol_avg": 160026,
    "vol_max": 1266778,
    "listing_date": "2024-02-01",
    "deadline": "2027-02-01",
@@ -157,13 +157,13 @@
    "name": "IBKS제25호스팩",
    "corp_name": "아이비케이에스제25호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 2130,
-   "chg_pct": -0.47,
+   "price": 2120,
+   "chg_pct": -0.93,
    "issue_price": 2000,
-   "prem_pct": 6.5,
+   "prem_pct": 6.0,
    "shares": 5980000,
    "mktcap_eok": 127,
-   "volume": 13125,
+   "volume": 17611,
    "vol_hist": [
     {
      "d": "09.22",
@@ -251,10 +251,10 @@
     },
     {
      "d": "10.27",
-     "v": 13125
+     "v": 17611
     }
    ],
-   "vol_avg": 98944,
+   "vol_avg": 99148,
    "vol_max": 939991,
    "listing_date": "2025-12-19",
    "deadline": "2028-12-19",
@@ -516,7 +516,7 @@
    "prem_pct": 1.5,
    "shares": 6210000,
    "mktcap_eok": 126,
-   "volume": 200,
+   "volume": 226,
    "vol_hist": [
     {
      "d": "09.22",
@@ -604,10 +604,10 @@
     },
     {
      "d": "10.27",
-     "v": 200
+     "v": 226
     }
    ],
-   "vol_avg": 12686,
+   "vol_avg": 12687,
    "vol_max": 70104,
    "listing_date": "2024-12-12",
    "deadline": "2027-12-12",
@@ -647,13 +647,13 @@
    "name": "KB제32호스팩",
    "corp_name": "케이비제32호기업인수목적(주)",
    "market": "KOSDAQ",
-   "price": 1986,
-   "chg_pct": -0.45,
+   "price": 1988,
+   "chg_pct": -0.35,
    "issue_price": 2000,
-   "prem_pct": -0.7,
+   "prem_pct": -0.6,
    "shares": 6330000,
    "mktcap_eok": 126,
-   "volume": 3554,
+   "volume": 4352,
    "vol_hist": [
     {
      "d": "09.22",
@@ -741,10 +741,10 @@
     },
     {
      "d": "10.27",
-     "v": 3554
+     "v": 4352
     }
    ],
-   "vol_avg": 9212,
+   "vol_avg": 9249,
    "vol_max": 53112,
    "listing_date": "2025-07-04",
    "deadline": "2028-07-04",
@@ -766,7 +766,7 @@
    "prem_pct": -1.0,
    "shares": 7885000,
    "mktcap_eok": 156,
-   "volume": 360,
+   "volume": 378,
    "vol_hist": [
     {
      "d": "09.22",
@@ -854,10 +854,10 @@
     },
     {
      "d": "10.27",
-     "v": 360
+     "v": 378
     }
    ],
-   "vol_avg": 17741,
+   "vol_avg": 17742,
    "vol_max": 61237,
    "listing_date": "2025-09-30",
    "deadline": "2028-09-30",
@@ -879,7 +879,7 @@
    "prem_pct": 4.25,
    "shares": 3310000,
    "mktcap_eok": 69,
-   "volume": 30661,
+   "volume": 100813,
    "vol_hist": [
     {
      "d": "09.22",
@@ -967,11 +967,11 @@
     },
     {
      "d": "10.27",
-     "v": 30661
+     "v": 100813
     }
    ],
-   "vol_avg": 9853,
-   "vol_max": 62014,
+   "vol_avg": 13042,
+   "vol_max": 100813,
    "listing_date": "2024-05-07",
    "deadline": "2027-05-07",
    "d_day": 192,
@@ -986,13 +986,13 @@
    "name": "SK증권제13호스팩",
    "corp_name": "에스케이증권제13호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 2065,
-   "chg_pct": 0.24,
+   "price": 2060,
+   "chg_pct": 0.0,
    "issue_price": 2000,
-   "prem_pct": 3.25,
+   "prem_pct": 3.0,
    "shares": 4420000,
    "mktcap_eok": 91,
-   "volume": 8168,
+   "volume": 8202,
    "vol_hist": [
     {
      "d": "09.22",
@@ -1080,10 +1080,10 @@
     },
     {
      "d": "10.27",
-     "v": 8168
+     "v": 8202
     }
    ],
-   "vol_avg": 3842,
+   "vol_avg": 3843,
    "vol_max": 10860,
    "listing_date": "2024-07-25",
    "deadline": "2027-07-25",
@@ -1361,7 +1361,7 @@
    "prem_pct": 0.35,
    "shares": 5040000,
    "mktcap_eok": 101,
-   "volume": 4253,
+   "volume": 4277,
    "vol_hist": [
     {
      "d": "09.22",
@@ -1449,10 +1449,10 @@
     },
     {
      "d": "10.27",
-     "v": 4253
+     "v": 4277
     }
    ],
-   "vol_avg": 6802,
+   "vol_avg": 6803,
    "vol_max": 26488,
    "listing_date": "2025-08-14",
    "deadline": "2028-08-14",
@@ -1581,13 +1581,13 @@
    "name": "교보20호스팩",
    "corp_name": "교보20호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 1973,
-   "chg_pct": -0.55,
+   "price": 1976,
+   "chg_pct": -0.4,
    "issue_price": 2000,
-   "prem_pct": -1.35,
+   "prem_pct": -1.2,
    "shares": 5970000,
    "mktcap_eok": 118,
-   "volume": 3975,
+   "volume": 3980,
    "vol_hist": [
     {
      "d": "09.22",
@@ -1675,7 +1675,7 @@
     },
     {
      "d": "10.27",
-     "v": 3975
+     "v": 3980
     }
    ],
    "vol_avg": 10858,
@@ -1807,13 +1807,13 @@
    "name": "대신밸런스제20호스팩",
    "corp_name": "대신밸런스제20호기업인수목적(주)",
    "market": "KOSDAQ",
-   "price": 1984,
-   "chg_pct": 0.1,
+   "price": 1985,
+   "chg_pct": 0.15,
    "issue_price": 2000,
-   "prem_pct": -0.8,
+   "prem_pct": -0.75,
    "shares": 6740000,
    "mktcap_eok": 134,
-   "volume": 11388,
+   "volume": 11394,
    "vol_hist": [
     {
      "d": "09.22",
@@ -1901,10 +1901,10 @@
     },
     {
      "d": "10.27",
-     "v": 11388
+     "v": 11394
     }
    ],
-   "vol_avg": 18981,
+   "vol_avg": 18982,
    "vol_max": 89427,
    "listing_date": "2026-06-05",
    "deadline": "2029-06-05",
@@ -1926,7 +1926,7 @@
    "prem_pct": 3.5,
    "shares": 5840000,
    "mktcap_eok": 121,
-   "volume": 14585,
+   "volume": 14604,
    "vol_hist": [
     {
      "d": "09.22",
@@ -2014,10 +2014,10 @@
     },
     {
      "d": "10.27",
-     "v": 14585
+     "v": 14604
     }
    ],
-   "vol_avg": 12186,
+   "vol_avg": 12187,
    "vol_max": 110067,
    "listing_date": "2024-06-18",
    "deadline": "2027-06-18",
@@ -2063,7 +2063,7 @@
    "prem_pct": 3.0,
    "shares": 6332000,
    "mktcap_eok": 130,
-   "volume": 495,
+   "volume": 615,
    "vol_hist": [
     {
      "d": "09.22",
@@ -2151,10 +2151,10 @@
     },
     {
      "d": "10.27",
-     "v": 495
+     "v": 615
     }
    ],
-   "vol_avg": 7409,
+   "vol_avg": 7414,
    "vol_max": 44315,
    "listing_date": "2024-11-28",
    "deadline": "2027-11-28",
@@ -2170,13 +2170,13 @@
    "name": "디비금융제14호스팩",
    "corp_name": "디비금융제14호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 1997,
-   "chg_pct": -0.15,
+   "price": 2000,
+   "chg_pct": 0.0,
    "issue_price": 2000,
-   "prem_pct": -0.15,
+   "prem_pct": 0.0,
    "shares": 5315000,
    "mktcap_eok": 106,
-   "volume": 188,
+   "volume": 213,
    "vol_hist": [
     {
      "d": "09.22",
@@ -2264,10 +2264,10 @@
     },
     {
      "d": "10.27",
-     "v": 188
+     "v": 213
     }
    ],
-   "vol_avg": 9866,
+   "vol_avg": 9867,
    "vol_max": 108840,
    "listing_date": "2025-07-22",
    "deadline": "2028-07-22",
@@ -2289,7 +2289,7 @@
    "prem_pct": 3.0,
    "shares": 5795000,
    "mktcap_eok": 119,
-   "volume": 1056,
+   "volume": 1057,
    "vol_hist": [
     {
      "d": "09.22",
@@ -2377,7 +2377,7 @@
     },
     {
      "d": "10.27",
-     "v": 1056
+     "v": 1057
     }
    ],
    "vol_avg": 6194,
@@ -2402,7 +2402,7 @@
    "prem_pct": -3.0,
    "shares": 7240000,
    "mktcap_eok": 140,
-   "volume": 9879,
+   "volume": 11641,
    "vol_hist": [
     {
      "d": "09.22",
@@ -2490,10 +2490,10 @@
     },
     {
      "d": "10.27",
-     "v": 9879
+     "v": 11641
     }
    ],
-   "vol_avg": 18205,
+   "vol_avg": 18285,
    "vol_max": 54725,
    "listing_date": "2026-06-19",
    "deadline": "2029-06-19",
@@ -2628,7 +2628,7 @@
    "prem_pct": -0.45,
    "shares": 7000000,
    "mktcap_eok": 139,
-   "volume": 1342,
+   "volume": 1436,
    "vol_hist": [
     {
      "d": "09.22",
@@ -2716,10 +2716,10 @@
     },
     {
      "d": "10.27",
-     "v": 1342
+     "v": 1436
     }
    ],
-   "vol_avg": 3427,
+   "vol_avg": 3431,
    "vol_max": 17626,
    "listing_date": "2025-12-22",
    "deadline": "2028-12-22",
@@ -3217,7 +3217,7 @@
    "prem_pct": -0.15,
    "shares": 6400000,
    "mktcap_eok": 128,
-   "volume": 106,
+   "volume": 119,
    "vol_hist": [
     {
      "d": "09.22",
@@ -3305,7 +3305,7 @@
     },
     {
      "d": "10.27",
-     "v": 106
+     "v": 119
     }
    ],
    "vol_avg": 5622,
@@ -3550,13 +3550,13 @@
    "name": "삼성스팩10호",
    "corp_name": "삼성기업인수목적10호(주)",
    "market": "KOSDAQ",
-   "price": 1987,
-   "chg_pct": -0.5,
+   "price": 1986,
+   "chg_pct": -0.55,
    "issue_price": 2000,
-   "prem_pct": -0.65,
+   "prem_pct": -0.7,
    "shares": 7520000,
    "mktcap_eok": 149,
-   "volume": 727,
+   "volume": 907,
    "vol_hist": [
     {
      "d": "09.22",
@@ -3644,10 +3644,10 @@
     },
     {
      "d": "10.27",
-     "v": 727
+     "v": 907
     }
    ],
-   "vol_avg": 7984,
+   "vol_avg": 7992,
    "vol_max": 40513,
    "listing_date": "2025-08-21",
    "deadline": "2028-08-21",
@@ -3782,7 +3782,7 @@
    "prem_pct": -0.9,
    "shares": 6580000,
    "mktcap_eok": 130,
-   "volume": 481,
+   "volume": 3749,
    "vol_hist": [
     {
      "d": "09.22",
@@ -3870,10 +3870,10 @@
     },
     {
      "d": "10.27",
-     "v": 481
+     "v": 3749
     }
    ],
-   "vol_avg": 6291,
+   "vol_avg": 6440,
    "vol_max": 32836,
    "listing_date": "2025-11-28",
    "deadline": "2028-11-28",
@@ -3895,7 +3895,7 @@
    "prem_pct": -1.0,
    "shares": 7350000,
    "mktcap_eok": 146,
-   "volume": 3420,
+   "volume": 3571,
    "vol_hist": [
     {
      "d": "09.22",
@@ -3983,10 +3983,10 @@
     },
     {
      "d": "10.27",
-     "v": 3420
+     "v": 3571
     }
    ],
-   "vol_avg": 5728,
+   "vol_avg": 5735,
    "vol_max": 15597,
    "listing_date": "2026-01-21",
    "deadline": "2029-01-21",
@@ -4002,13 +4002,13 @@
    "name": "신영스팩11호",
    "corp_name": "신영해피투모로우제11호기업인수목적(주)",
    "market": "KOSDAQ",
-   "price": 2050,
-   "chg_pct": -0.24,
+   "price": 2045,
+   "chg_pct": -0.49,
    "issue_price": 2000,
-   "prem_pct": 2.5,
+   "prem_pct": 2.25,
    "shares": 6068000,
    "mktcap_eok": 124,
-   "volume": 15017,
+   "volume": 15418,
    "vol_hist": [
     {
      "d": "09.22",
@@ -4096,10 +4096,10 @@
     },
     {
      "d": "10.27",
-     "v": 15017
+     "v": 15418
     }
    ],
-   "vol_avg": 11637,
+   "vol_avg": 11656,
    "vol_max": 74582,
    "listing_date": "2025-11-24",
    "deadline": "2028-11-24",
@@ -4371,7 +4371,7 @@
    "prem_pct": 2.25,
    "shares": 5640000,
    "mktcap_eok": 115,
-   "volume": 148,
+   "volume": 172,
    "vol_hist": [
     {
      "d": "09.22",
@@ -4459,10 +4459,10 @@
     },
     {
      "d": "10.27",
-     "v": 148
+     "v": 172
     }
    ],
-   "vol_avg": 5565,
+   "vol_avg": 5566,
    "vol_max": 23889,
    "listing_date": "2024-12-23",
    "deadline": "2027-12-23",
@@ -4597,7 +4597,7 @@
    "prem_pct": 0.0,
    "shares": 5620000,
    "mktcap_eok": 112,
-   "volume": 567,
+   "volume": 592,
    "vol_hist": [
     {
      "d": "09.22",
@@ -4685,10 +4685,10 @@
     },
     {
      "d": "10.27",
-     "v": 567
+     "v": 592
     }
    ],
-   "vol_avg": 7160,
+   "vol_avg": 7161,
    "vol_max": 24664,
    "listing_date": "2025-05-29",
    "deadline": "2028-05-29",
@@ -4710,7 +4710,7 @@
    "prem_pct": -2.0,
    "shares": 5340000,
    "mktcap_eok": 105,
-   "volume": 1605,
+   "volume": 2906,
    "vol_hist": [
     {
      "d": "09.22",
@@ -4798,10 +4798,10 @@
     },
     {
      "d": "10.27",
-     "v": 1605
+     "v": 2906
     }
    ],
-   "vol_avg": 7220,
+   "vol_avg": 7280,
    "vol_max": 52883,
    "listing_date": "2026-04-01",
    "deadline": "2029-04-01",
@@ -4823,7 +4823,7 @@
    "prem_pct": -1.75,
    "shares": 5620000,
    "mktcap_eok": 110,
-   "volume": 2636,
+   "volume": 3773,
    "vol_hist": [
     {
      "d": "09.22",
@@ -4911,10 +4911,10 @@
     },
     {
      "d": "10.27",
-     "v": 2636
+     "v": 3773
     }
    ],
-   "vol_avg": 4760,
+   "vol_avg": 4812,
    "vol_max": 16535,
    "listing_date": "2026-04-30",
    "deadline": "2029-04-30",
@@ -5156,13 +5156,13 @@
    "name": "엔에이치스팩32호",
    "corp_name": "엔에이치기업인수목적32호 주식회사",
    "market": "KOSDAQ",
-   "price": 2020,
-   "chg_pct": 1.0,
+   "price": 2015,
+   "chg_pct": 0.75,
    "issue_price": 2000,
-   "prem_pct": 1.0,
+   "prem_pct": 0.75,
    "shares": 6216500,
-   "mktcap_eok": 126,
-   "volume": 692,
+   "mktcap_eok": 125,
+   "volume": 786,
    "vol_hist": [
     {
      "d": "09.22",
@@ -5250,10 +5250,10 @@
     },
     {
      "d": "10.27",
-     "v": 692
+     "v": 786
     }
    ],
-   "vol_avg": 6954,
+   "vol_avg": 6958,
    "vol_max": 51062,
    "listing_date": "2025-12-05",
    "deadline": "2028-12-05",
@@ -5269,13 +5269,13 @@
    "name": "엔에이치스팩33호",
    "corp_name": "엔에이치기업인수목적33호(주)",
    "market": "KOSDAQ",
-   "price": 1991,
-   "chg_pct": 0.25,
+   "price": 1986,
+   "chg_pct": 0.0,
    "issue_price": 2000,
-   "prem_pct": -0.45,
+   "prem_pct": -0.7,
    "shares": 7700000,
    "mktcap_eok": 153,
-   "volume": 421,
+   "volume": 592,
    "vol_hist": [
     {
      "d": "09.22",
@@ -5363,10 +5363,10 @@
     },
     {
      "d": "10.27",
-     "v": 421
+     "v": 592
     }
    ],
-   "vol_avg": 3394,
+   "vol_avg": 3402,
    "vol_max": 12321,
    "listing_date": "2026-03-27",
    "deadline": "2029-03-27",
@@ -5388,7 +5388,7 @@
    "prem_pct": -4.8,
    "shares": 9050000,
    "mktcap_eok": 172,
-   "volume": 34459,
+   "volume": 36579,
    "vol_hist": [
     {
      "d": "09.22",
@@ -5476,10 +5476,10 @@
     },
     {
      "d": "10.27",
-     "v": 34459
+     "v": 36579
     }
    ],
-   "vol_avg": 141653,
+   "vol_avg": 141749,
    "vol_max": 622586,
    "listing_date": "2026-09-10",
    "deadline": "2029-09-10",
@@ -5501,7 +5501,7 @@
    "prem_pct": -0.65,
    "shares": 4110000,
    "mktcap_eok": 82,
-   "volume": 322,
+   "volume": 522,
    "vol_hist": [
     {
      "d": "09.22",
@@ -5589,10 +5589,10 @@
     },
     {
      "d": "10.27",
-     "v": 322
+     "v": 522
     }
    ],
-   "vol_avg": 4494,
+   "vol_avg": 4503,
    "vol_max": 19272,
    "listing_date": "2025-07-22",
    "deadline": "2028-07-22",
@@ -5983,7 +5983,7 @@
    "prem_pct": 2.0,
    "shares": 4720000,
    "mktcap_eok": 96,
-   "volume": 225,
+   "volume": 314,
    "vol_hist": [
     {
      "d": "09.22",
@@ -6071,10 +6071,10 @@
     },
     {
      "d": "10.27",
-     "v": 225
+     "v": 314
     }
    ],
-   "vol_avg": 5897,
+   "vol_avg": 5901,
    "vol_max": 65723,
    "listing_date": "2024-10-31",
    "deadline": "2027-10-31",
@@ -6096,7 +6096,7 @@
    "prem_pct": -0.1,
    "shares": 5660000,
    "mktcap_eok": 113,
-   "volume": 254,
+   "volume": 2410,
    "vol_hist": [
     {
      "d": "09.22",
@@ -6184,10 +6184,10 @@
     },
     {
      "d": "10.27",
-     "v": 254
+     "v": 2410
     }
    ],
-   "vol_avg": 3184,
+   "vol_avg": 3282,
    "vol_max": 18472,
    "listing_date": "2025-12-11",
    "deadline": "2028-12-11",
@@ -6209,7 +6209,7 @@
    "prem_pct": 3.0,
    "shares": 5020000,
    "mktcap_eok": 103,
-   "volume": 3129,
+   "volume": 3131,
    "vol_hist": [
     {
      "d": "09.22",
@@ -6297,7 +6297,7 @@
     },
     {
      "d": "10.27",
-     "v": 3129
+     "v": 3131
     }
    ],
    "vol_avg": 4884,
@@ -6316,13 +6316,13 @@
    "name": "케이비제34호스팩",
    "corp_name": "케이비제34호기업인수목적(주)",
    "market": "KOSDAQ",
-   "price": 1899,
-   "chg_pct": 0.0,
+   "price": 1898,
+   "chg_pct": -0.05,
    "issue_price": 2000,
-   "prem_pct": -5.05,
+   "prem_pct": -5.1,
    "shares": 7210000,
    "mktcap_eok": 137,
-   "volume": 73755,
+   "volume": 75871,
    "vol_hist": [
     {
      "d": "09.22",
@@ -6410,10 +6410,10 @@
     },
     {
      "d": "10.27",
-     "v": 73755
+     "v": 75871
     }
    ],
-   "vol_avg": 5729894,
+   "vol_avg": 5729991,
    "vol_max": 118773329,
    "listing_date": "2026-09-22",
    "deadline": "2029-09-22",
@@ -6429,13 +6429,13 @@
    "name": "키움제10호스팩",
    "corp_name": "키움제10호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 2200,
-   "chg_pct": 1.62,
+   "price": 2195,
+   "chg_pct": 1.39,
    "issue_price": 2000,
-   "prem_pct": 10.0,
+   "prem_pct": 9.75,
    "shares": 4230000,
    "mktcap_eok": 93,
-   "volume": 611,
+   "volume": 612,
    "vol_hist": [
     {
      "d": "09.22",
@@ -6523,7 +6523,7 @@
     },
     {
      "d": "10.27",
-     "v": 611
+     "v": 612
     }
    ],
    "vol_avg": 11498,
@@ -6685,13 +6685,13 @@
    "name": "키움히어로제1호스팩",
    "corp_name": "키움히어로제1호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 2015,
-   "chg_pct": 0.0,
+   "price": 2010,
+   "chg_pct": -0.25,
    "issue_price": 2000,
-   "prem_pct": 0.75,
+   "prem_pct": 0.5,
    "shares": 5095000,
-   "mktcap_eok": 103,
-   "volume": 63,
+   "mktcap_eok": 102,
+   "volume": 146,
    "vol_hist": [
     {
      "d": "09.22",
@@ -6779,10 +6779,10 @@
     },
     {
      "d": "10.27",
-     "v": 63
+     "v": 146
     }
    ],
-   "vol_avg": 10937,
+   "vol_avg": 10940,
    "vol_max": 66990,
    "listing_date": "2025-12-12",
    "deadline": "2028-12-12",
@@ -6798,13 +6798,13 @@
    "name": "키움히어로제2호스팩",
    "corp_name": "키움히어로제2호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 1950,
-   "chg_pct": -1.02,
+   "price": 1964,
+   "chg_pct": -0.3,
    "issue_price": 2000,
-   "prem_pct": -2.5,
+   "prem_pct": -1.8,
    "shares": 6310000,
-   "mktcap_eok": 123,
-   "volume": 11132,
+   "mktcap_eok": 124,
+   "volume": 11137,
    "vol_hist": [
     {
      "d": "09.22",
@@ -6892,7 +6892,7 @@
     },
     {
      "d": "10.27",
-     "v": 11132
+     "v": 11137
     }
    ],
    "vol_avg": 12722,
@@ -6917,7 +6917,7 @@
    "prem_pct": 4.75,
    "shares": 3200000,
    "mktcap_eok": 67,
-   "volume": 85460,
+   "volume": 101378,
    "vol_hist": [
     {
      "d": "09.22",
@@ -7005,10 +7005,10 @@
     },
     {
      "d": "10.27",
-     "v": 85460
+     "v": 101378
     }
    ],
-   "vol_avg": 33451,
+   "vol_avg": 34174,
    "vol_max": 160485,
    "listing_date": "2024-03-27",
    "deadline": "2027-03-27",
@@ -7030,7 +7030,7 @@
    "prem_pct": 4.5,
    "shares": 3700000,
    "mktcap_eok": 77,
-   "volume": 22365,
+   "volume": 22459,
    "vol_hist": [
     {
      "d": "09.22",
@@ -7118,10 +7118,10 @@
     },
     {
      "d": "10.27",
-     "v": 22365
+     "v": 22459
     }
    ],
-   "vol_avg": 19334,
+   "vol_avg": 19339,
    "vol_max": 84773,
    "listing_date": "2024-04-24",
    "deadline": "2027-04-24",
@@ -7143,7 +7143,7 @@
    "prem_pct": 2.0,
    "shares": 4520000,
    "mktcap_eok": 92,
-   "volume": 357,
+   "volume": 451,
    "vol_hist": [
     {
      "d": "09.22",
@@ -7231,10 +7231,10 @@
     },
     {
      "d": "10.27",
-     "v": 357
+     "v": 451
     }
    ],
-   "vol_avg": 5127,
+   "vol_avg": 5132,
    "vol_max": 23044,
    "listing_date": "2024-11-19",
    "deadline": "2027-11-19",
@@ -7250,13 +7250,13 @@
    "name": "하나35호스팩",
    "corp_name": "하나35호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 2005,
-   "chg_pct": 0.0,
+   "price": 1988,
+   "chg_pct": -0.85,
    "issue_price": 2000,
-   "prem_pct": 0.25,
+   "prem_pct": -0.6,
    "shares": 6030000,
-   "mktcap_eok": 121,
-   "volume": 1745,
+   "mktcap_eok": 120,
+   "volume": 2250,
    "vol_hist": [
     {
      "d": "09.22",
@@ -7344,10 +7344,10 @@
     },
     {
      "d": "10.27",
-     "v": 1745
+     "v": 2250
     }
    ],
-   "vol_avg": 11459,
+   "vol_avg": 11482,
    "vol_max": 49790,
    "listing_date": "2025-08-06",
    "deadline": "2028-08-06",
@@ -7363,13 +7363,13 @@
    "name": "하나36호스팩",
    "corp_name": "하나36호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 1974,
-   "chg_pct": -0.05,
+   "price": 1960,
+   "chg_pct": -0.76,
    "issue_price": 2000,
-   "prem_pct": -1.3,
+   "prem_pct": -2.0,
    "shares": 7740000,
-   "mktcap_eok": 153,
-   "volume": 12828,
+   "mktcap_eok": 152,
+   "volume": 15050,
    "vol_hist": [
     {
      "d": "09.22",
@@ -7457,10 +7457,10 @@
     },
     {
      "d": "10.27",
-     "v": 12828
+     "v": 15050
     }
    ],
-   "vol_avg": 9141,
+   "vol_avg": 9242,
    "vol_max": 60397,
    "listing_date": "2025-12-22",
    "deadline": "2028-12-22",
@@ -7589,13 +7589,13 @@
    "name": "한국제16호스팩",
    "corp_name": "한국제16호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 1945,
-   "chg_pct": -0.05,
+   "price": 1944,
+   "chg_pct": -0.1,
    "issue_price": 2000,
-   "prem_pct": -2.75,
+   "prem_pct": -2.8,
    "shares": 6750000,
    "mktcap_eok": 131,
-   "volume": 2838,
+   "volume": 2844,
    "vol_hist": [
     {
      "d": "09.22",
@@ -7683,7 +7683,7 @@
     },
     {
      "d": "10.27",
-     "v": 2838
+     "v": 2844
     }
    ],
    "vol_avg": 19508,
@@ -7702,13 +7702,13 @@
    "name": "한국제17호스팩",
    "corp_name": "한국제17호기업인수목적 주식회사",
    "market": "KOSDAQ",
-   "price": 1901,
-   "chg_pct": -0.26,
+   "price": 1899,
+   "chg_pct": -0.37,
    "issue_price": 2000,
-   "prem_pct": -4.95,
+   "prem_pct": -5.05,
    "shares": 8700000,
    "mktcap_eok": 165,
-   "volume": 44324,
+   "volume": 59203,
    "vol_hist": [
     {
      "d": "09.22",
@@ -7796,10 +7796,10 @@
     },
     {
      "d": "10.27",
-     "v": 44324
+     "v": 59203
     }
    ],
-   "vol_avg": 10603220,
+   "vol_avg": 10603896,
    "vol_max": 222365814,
    "listing_date": "2026-09-22",
    "deadline": "2029-09-22",
@@ -7815,13 +7815,13 @@
    "name": "한화플러스제5호스팩",
    "corp_name": "한화플러스제5호기업인수목적(주)",
    "market": "KOSDAQ",
-   "price": 2625,
-   "chg_pct": 0.0,
+   "price": 2620,
+   "chg_pct": -0.19,
    "issue_price": 2000,
-   "prem_pct": 31.25,
+   "prem_pct": 31.0,
    "shares": 4960000,
    "mktcap_eok": 130,
-   "volume": 31903,
+   "volume": 37015,
    "vol_hist": [
     {
      "d": "09.22",
@@ -7909,10 +7909,10 @@
     },
     {
      "d": "10.27",
-     "v": 31903
+     "v": 37015
     }
    ],
-   "vol_avg": 176388,
+   "vol_avg": 176620,
    "vol_max": 1312618,
    "listing_date": "2025-03-20",
    "deadline": "2028-03-20",
